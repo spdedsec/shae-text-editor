@@ -1,0 +1,46 @@
+[package]
+name = "shae-text-editor"
+version = "0.1.0"
+edition = "2021"
+description = "Shae Text Editor — a fast, smooth, GPU-accelerated native text editor written in Rust (egui)"
+authors = ["Satya <spdedsec>"]
+license = "MIT"
+repository = "https://github.com/spdedsec/shae-text-editor"
+readme = "README.md"
+keywords = ["editor", "text-editor", "egui", "gui", "rust"]
+categories = ["text-editors", "gui"]
+
+[dependencies]
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow", "x11", "wayland"] }
+egui = "0.31"
+egui_extras = "0.31"
+ropey = "1.6"
+syntect = { version = "5.3", default-features = false, features = ["parsing", "dump-load", "default-syntaxes", "default-themes", "regex-fancy", "metadata"] }
+rfd = "0.18"
+arboard = "3.7"
+nucleo = "0.5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+anyhow = "1"
+thiserror = "1"
+unicode-segmentation = "1"
+unicode-width = "0.2"
+git2 = { version = "0.21", default-features = false }
+notify = "8"
+regex = "1"
+crossbeam-channel = "0.5"
+parking_lot = "0.12"
+directories = "5"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev]
+opt-level = 1
