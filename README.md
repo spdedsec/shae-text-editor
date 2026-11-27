@@ -6,6 +6,24 @@ A fast, smooth, GPU-accelerated native text editor written in Rust with [egui](h
   ◈ SHAE  Text Editor
 ```
 
+> **New here?** Read the complete [Download & User Guide](GUIDE.md) — install, first launch, every feature, and the full shortcut reference.
+>
+> **Install in one line (Linux x86_64):**
+> ```bash
+> curl -sL https://github.com/spdedsec/shae-text-editor/releases/latest/download/shae-text-editor-linux-x86_64.tar.gz | tar xz
+> cd shae-text-editor && ./install.sh
+> ```
+
+## Install
+
+| Platform | Method |
+| --- | --- |
+| Linux x86_64 | [Download the release](https://github.com/spdedsec/shae-text-editor/releases/latest), extract, run `./install.sh` |
+| Any platform | `cargo install --git https://github.com/spdedsec/shae-text-editor` |
+| From source | `git clone … && cargo build --release` |
+
+Full step-by-step instructions, requirements, and troubleshooting live in **[GUIDE.md](GUIDE.md)**.
+
 ## Why
 
 Most "fast" editors are either web apps in a browser wrapper or heavyweight IDEs. Shae is a single native binary: no Electron, no runtime, no install ceremony. The entire UI is rendered on the GPU through egui's glow backend, text is stored in a [rope](https://github.com/cessen/ropey), and syntax highlighting is incremental via [syntect](https://github.com/trishume/syntect).

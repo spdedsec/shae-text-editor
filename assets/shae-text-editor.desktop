@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Shae Text Editor
+GenericName=Text Editor
+Comment=Fast, GPU-accelerated native text editor
+Exec=shae-text-editor %F
+Icon=shae-text-editor
+Terminal=false
+Categories=Utility;TextEditor;
+Keywords=text;editor;code;rust;shae;
+StartupWMClass=shae-text-editor
+MimeType=text/plain;text/x-rust;text/x-python;application/json;text/markdown;
